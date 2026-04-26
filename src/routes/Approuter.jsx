@@ -1,9 +1,10 @@
 import React from 'react'
-import Landing from "../pages/Landing/Landing"
-import About from "../pages/About/About"
-import Contact from "../pages/Contact Us/Contact"
-import NotFound from "../pages/NotFound/NotFound";
+import Landing from '../pages/LandingPage/Landing';
+import Loading from '../pages/LoadingPage/Loading';
+import Home from '../pages/Home/Home';
+import NotFound from '../pages/PageNotFound/PageNotFound';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Editor from '../pages/Editor/Editor';
 
 
 const router = createBrowserRouter([
@@ -12,12 +13,15 @@ const router = createBrowserRouter([
         element: <Landing />
     },
     {
-        path: "/About",
-        element: <About />
+        path: "/editor",
+        element: <Home />
+    }, {
+        path: "/codeEditor",
+        element: <Editor />
     },
     {
-        path: "/Contact",
-        element: <Contact />
+        path: "/loading",
+        element: <Loading />
     },
     {
         path: "*",

@@ -1,0 +1,15 @@
+.show {
+    overflow: hidden;
+    animation: shows 5s ease-out 0s forwards;
+}
+
+@keyframes shows {
+    from {
+        height: 100vh;
+        opacity: 1;
+    }
+    to {
+        height: 0;
+        opacity: 0;
+    }
+}
