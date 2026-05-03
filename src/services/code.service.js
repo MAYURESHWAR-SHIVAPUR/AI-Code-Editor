@@ -1,8 +1,14 @@
-// src/services/code.service.js
-
 export const executeCode = async ({ code, language, input }) => {
     try {
-        const res = await fetch("http://localhost:3000/code/run-code", {
+        const controller = new AbortController();
+
+        // const timeout = await setTimeout(() => {
+        //     // controller.abort();
+        //     return "Server is out!"
+
+        // }, 1000);
+
+        const res = await fetch(import.meta.env.VITE_API_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -11,22 +17,30 @@ export const executeCode = async ({ code, language, input }) => {
                 code,
                 language,
                 input
-            })
+            }),
+            // signal: controller.signal
         });
 
-        if (!res.ok) {
-            return "Failed to execute code";
-        } else {
-            const result = await res.json();
+        // clearTimeout(timeout);
 
-            // const data = await result.run.output || "No Output";
-            // return data;
-            return result.output
+        if (!res.ok) {
+            return "Server error";
         }
 
-    } catch (error) {
-        // return error.message
-        return "Failed to Fetch code";
+        const result = await res.json();
+        console.log(result);
+        return result.output || "No Output";
 
+
+    } catch (error) {
+        if (error.name === "AbortError") {
+            return "Server timeout";
+        }
+
+        if (error instanceof TypeError) {
+            return "Server is offline";
+        }
+
+        return "Something went wrong";
     }
 };

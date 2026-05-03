@@ -1,0 +1,45 @@
+.scale-115 {
+    transform: scale(1.15);
+    transition: all 3s ease-in-out;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    border-radius: 16px;
+}
+
+.glassDark {
+    background: rgba(20, 20, 20, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
+}
+
+.glassBlue {
+    background: rgba(0, 122, 204, 0.14);
+    /* border: 1px solid rgba(255, 255, 255, 0.14); */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 30px rgba(0, 122, 204, 0.22);
+    /* border-radius: 16px; */
+}
+
+.load {
+    animation: loading 1s ease-in-out 0s infinite;
+}
+
+@keyframes loading {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
