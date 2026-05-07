@@ -15,44 +15,61 @@
 ---
 
 ## 📸 Preview
+![Preview](./Screenshots/Intro.png)
 ![Preview](./Screenshots/Home.png)
-![Preview](./Screenshots/About.png)
+![Preview](./Screenshots/IntroMobile.png)
+![Preview](./Screenshots/HomeMobile.png)
+![Preview](./Screenshots/HomeMobile1.png)
+![Preview](./Screenshots/HomeMobile2.png)
+![Preview](./Screenshots/intro.gif)
+![Preview](./Screenshots/Home.gif)
+
 
 ---
 
 ## ✨ Features
 
-- 🛍️ **Product Listings** — Browse a rich catalog of plants with details and images
-- 🔍 **Search & Filter** — Easily find plants by category, price, or name
-- 📱 **Responsive Design** — tablet, and desktop
+### 🖥️ Code Editor
+- 🌐 **Multi-Language Support** — Write and run code in JavaScript, Python, C++, Java.
+- ⚡ **Instant Code Runner** — Execute code and see output in real time without leaving the browser
+- 🎨 **Syntax Highlighting** — Clean, readable code with language-aware color highlighting
+- 🔢 **Line Numbers** — Always know exactly where you are in your code
+- ↩️ **Auto Indentation** — Smart indentation that follows your code structure automatically
+- 📋 **Copy Code** — One-click copy your entire code to clipboard
+- 🔄 **Reset Editor** — Clear and start fresh instantly with one click
+- 📱 **Fully Responsive** — Works seamlessly on desktop, tablet, and mobile
 
-### 🎨 UI/UX Design
-- 🌿 **Plant-Themed Design System** — Custom color palette, typography, and components built around a natural aesthetic
-- 📱 **Responsive** — Pixel-perfect layout across tablet, and desktop
-- 🎯 **Intuitive Navigation** — Clean layout with clear visual hierarchy and call-to-actions
-- 🖼️ **Optimized Images** — React.js `<Image />` for lazy loading and automatic resizing
-- 🌙 **Consistent Design Language** — Reusable components with CSS Modules for scoped, maintainable styles
+### 🤖 AI Features *(UI ready — coming soon)*
+- 🧠 **AI Code Explainer** — Get plain-English explanations of any code, beginner-friendly or advanced
+- 🔧 **AI Fix & Improve** — Auto-detect bugs, optimize performance, and clean up messy code
+- 📊 **Code Visualizer** — Generate flowcharts, memory models, and call stack diagrams from your code
+- 💬 **Ask AI Anything** — Chat with an AI assistant about errors, concepts, or best practices
+- ⏱️ **Time & Space Complexity** — Instantly analyze the Big O complexity of your code
 
-### 🎬 Animations
-- ⚡ **GSAP Powered Transitions** — Smooth, high-performance page and element animations
-- 🎭 **Rive Interactive Graphics** — Real-time interactive animated illustrations
-- 🖱️ **Micro-interactions** — Subtle hover effects, button feedback, and loading states
-- 🃏 **Editor Card Animations** — Smooth reveal and hover effects on Editor
-- 📦 **Page Transition Effects** — Seamless animated transitions between routes
+### 🎬 Animations & UI/UX
+- ⚡ **GSAP Powered Transitions** — Smooth, high-performance animations throughout the UI
+- 🎭 **Rive Interactive Graphics** — Real-time animated illustrations and loaders
+- 🌊 **Micro-interactions** — Subtle hover, click feedback, and loading states
+- 🎯 **Minimal & Clean UI** — Distraction-free editor experience built for focus
+- 🌙 **Consistent Design Language** — Reusable components with CSS Modules and Tailwind
+
 ---
-
 ## 🛠️ Tech Stack
 
 | Technology | Purpose | Version |
 |------------|---------|---------|
 | [React.js](https://reactjs.org/) | UI Component Library | 18+ |
+| [Vite](https://vitejs.dev/) | Build Tool & Dev Server | 5+ |
+| [Node.js](https://nodejs.org/) | Backend Runtime | 18+ |
+| [Express.js](https://expressjs.com/) | REST API & Code Execution Server | 4+ |
+| [Judge0 API](https://judge0.com/) | Code Execution Engine (multi-language) | Latest |
 | [Tailwind CSS](https://tailwindcss.com/) | Utility-First Styling | 3+ |
 | [GSAP](https://greensock.com/gsap/) | High-Performance Animations | 3+ |
 | [Rive](https://rive.app/) | Interactive Animated Graphics | Latest |
 | [CSS Modules](https://github.com/css-modules/css-modules) | Scoped Component Styling | — |
+| [React Router](https://reactrouter.com/) | Client-Side Routing | 6+ |
 | [Git](https://git-scm.com/) | Version Control | — |
 | [GitHub](https://github.com/) | Code Hosting & Collaboration | — |
-
 ---
 
 ## 🚀 Getting Started
@@ -68,9 +85,10 @@ Make sure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/plant-ecommerce.git
-   cd plant-ecommerce
+   git clone https://github.com/MAYURESHWAR-SHIVAPUR/AI-Code-Editor.git
+   cd AI-Code-Editor
    ```
+
 
 2. **Install dependencies**
    ```bash
@@ -90,59 +108,79 @@ Make sure you have the following installed:
 4. Open [http://localhost:3000](http://localhost:3000) in your browser 🎉
 
 ---
-
 ## 📁 Project Structure
 
 ```
-plant-ecommerce/
-├── .github/               # GitHub config & workflows
-├── public/                # Static assets (favicon, fonts)
-├── Screenshots/           # README screenshots
-├── src/
-│   ├── animations/        # GSAP & Rive animation logic
-│   ├── assets/            # Images, icons, SVGs
-│   ├── components/        # Reusable React components
-│   ├── context/           # React Context (global state)
-│   ├── features/          # Feature-based modules
-│   ├── pages/             # App pages / route components
-│   ├── routes/            # React Router route definitions
-│   ├── styles/            # Global & module CSS files
-│   ├── App.css            # App-level styles
-│   ├── App.jsx            # Root component
-│   ├── index.css          # Base styles
-│   └── main.jsx           # App entry point
-├── .env                   # Environment variables
-├── .gitignore             # Git ignored files
-├── eslint.config.js       # ESLint configuration
-├── index.html             # HTML entry point
-├── package.json           # Dependencies & scripts
-├── vite.config.js         # Vite configuration
-└── README.md              # Project documentation
+codewave-ai/
+├── Client/                        # React frontend
+│   ├── public/                    # Static assets
+│   ├── ScreenShots/               # README screenshots
+│   ├── src/
+│   │   ├── animtion/              # GSAP & Rive animation logic
+│   │   ├── assets/                # Images, icons, SVGs
+│   │   ├── components_2/          # Reusable React components
+│   │   ├── context/               # React Context (global state)
+│   │   ├── Data/                  # Static data & constants
+│   │   ├── features/              # Feature-based modules
+│   │   ├── hooks/                 # Custom React hooks
+│   │   ├── pages/                 # App pages / route components
+│   │   ├── redux/                 # Redux state management
+│   │   ├── routes/                # React Router route definitions
+│   │   ├── services/              # API calls & external services
+│   │   ├── style/                 # Global & module CSS files
+│   │   ├── App.css                # App-level styles
+│   │   ├── App.jsx                # Root component
+│   │   ├── index.css              # Base styles
+│   │   └── main.jsx               # App entry point
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html                 # HTML entry point
+│   ├── package.json
+│   └── vite.config.js             # Vite configuration
+│
+├── Server/                        # Node.js + Express backend
+│   ├── config/                    # DB & app configuration
+│   ├── controller/                # Route business logic
+│   ├── middleware/                 # Auth & error middleware
+│   ├── model/                     # Data models / schemas
+│   ├── public/                    # Static server assets
+│   ├── routes/                    # API route definitions
+│   ├── services/                  # External service logic
+│   ├── utils/                     # Helper functions
+│   ├── .env                       # Environment variables
+│   ├── package.json
+│   └── Server.js                  # Server entry point
+│
+└── README.md
 ```
 
 ## 📦 Available Scripts
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start development server |
+| `npm run dev` | Start development Client |
 | `npm run build` | Build for production |
-| `npm run start` | Start production server |
+| `npm run start` | Start production Client |
 | `npm run lint` | Run ESLint |
+| `node Server.js` | Strat development Server |
 
 ---
 
 ## 🌱 Roadmap
 
-- [x] Home page
-- [x] Product listings / Shop page
-- [x] GSAP animations
-- [x] Rive interactive graphics
+- [x] Multi-language code editor UI
+- [x] Code runner (JavaScript, Python, C++, Java)
+- [x] Real-time output panel
+- [x] Syntax highlighting
+- [x] Redux state management
+- [x] Custom React hooks
+- [x] REST API with Express
+- [x] GSAP & Rive animations
 - [x] Responsive design
-- [x] CSS Modules + Tailwind styling
-- [ ] Shopping cart
-- [ ] User authentication
-- [ ] Checkout & payments
-- [ ] Product search & filter
+- [ ] AI code explainer (OpenAI / Claude API integration)
+- [ ] AI bug finder & optimizer
+- [ ] Code visualizer (flowchart, call stack, memory model)
+- [ ] Ask AI chat assistant
 
 ---
 

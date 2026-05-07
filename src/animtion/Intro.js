@@ -11,6 +11,23 @@ export const fadeInUp = (...el) => {
     });
 };
 
+export const fadeIn = () => {
+    gsap.fromTo(["#Title", "#input", "#login"], {
+        opacity: 0,
+        y: -40,
+        duration: 0.7,
+        stagger: 0.4,
+        ease: "back.out(2)",
+    }, {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        stagger: 0.4,
+        ease: "back.out(2)",
+
+    });
+};
+
 
 export const H2fadeInUp = (...el) => {
     gsap.from(el, {
