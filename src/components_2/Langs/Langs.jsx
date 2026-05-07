@@ -11,7 +11,7 @@ const Langs = ({ lang, icon, img = false }) => {
         >
             {!img && <i class={`fa-brands fa-${icon} text-[#8B98D5] text-5xl`}></i>}
             {img && <p className='text-[#8B98D5] text-4xl text-center font-extrabold'>C++</p>}
-            <p className='text-[#c7c7c7] text-sm text-center font-bold'>{lang}</p>
+            <p className='text-[#c7c7c7] text-sm text-center font-bold hidden lg:block'>{lang}</p>
             <img src="" alt="" />
         </article>
     )

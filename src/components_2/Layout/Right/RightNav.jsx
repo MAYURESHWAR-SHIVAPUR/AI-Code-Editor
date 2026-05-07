@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom'
 
 
 const RightNav = () => {
-    const basecss = 'w-fit h-fit py-2 px-2 text-md hover:scale-115 font-regular'
+    const basecss = 'w-fit h-fit lg:py-2 lg:px-2 text-md hover:scale-115 font-regular'
     const Selectedcss = 'w-fit h-fit py-2 px-2  text-md font-bold'
 
     return (
-        <header id='rightNav' className='h-fit w-2/3 py-1 bg-[#0C112A] rounded-md mt-2'>
+        <header id='rightNav' className='h-fit lg:w-2/3 w-full py-1 bg-[#0C112A] rounded-md mt-2'>
             <nav className='flex items-center justify-between text-white'>
                 <NavLink id='nav1' className={({ isActive }) => isActive ? Selectedcss : basecss} to="/codeEditor">
                     <i class="fa-solid fa-square-poll-vertical mr-2"></i>

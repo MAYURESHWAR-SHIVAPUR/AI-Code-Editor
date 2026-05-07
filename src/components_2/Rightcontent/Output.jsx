@@ -13,10 +13,10 @@ const Output = () => {
   return (
     <main id='output' className='h-full w-full text-white  overflow-hidden border-2 border-[#486aff8f] rounded-md  '>
       <nav id='outputNav' className='h-fit flex items-center justify-between text-sm bg-[#17076C] p-3 text-[#b2b2b2]'>
-        <article className='font-bold gap-3 flex itmes-center justify-between'>
+        <article className='font-bold gap-3 flex itmes-center justify-between '>
           <button disabled className=''>Run</button>
-          <button disabled className='text-green-300'>Successful </button>
-          <button disabled className='w-fit'>
+          <button disabled className='text-green-300 lg:block hidden'>Successful </button>
+          <button disabled className='w-fit lg:block md:hidden block'>
             <i class="fa-regular fa-clock mr-1"></i>
             0.14s
           </button>

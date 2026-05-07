@@ -1,14 +1,23 @@
 import React from 'react'
 import "../../assets/style/NavButton.scss"
 
-const Button = ({ title, icon }) => {
+const Button = ({ title, icon, to }) => {
+    function navigate() {
+        if (to === "Developer") {
+            window.open("https://animate-with-mayur.netlify.app/")
+        } else {
+            window.location.href = to
+        }
+
+    }
     return (
         <>
             <button
-                className=' font-bold text-sm text-[#c8c9d2] border border-transparent hover-border hover:border- hover:bg-[#3949AB] px-2 py-2 rounded-xl hover:glass hover:shadow-[0_4px_10px_rgba(15,14,54,0.6)]'
+                onClick={navigate}
+                className=' font-bold text-sm text-[#c8c9d2] border border-transparent hover-border hover:border- hover:bg-[#3949AB] md:px-2 md:py-2 p-1 rounded-xl hover:glass hover:shadow-[0_4px_10px_rgba(15,14,54,0.6)]'
             >
-                <i className={`fa-solid fa-${icon} mr-3`}></i>
-                {title}
+                <i className={`fa-solid fa-${icon} md:mr-3 md:text-md text-sm`}></i>
+                {window.innerWidth > 768 ? title : ""}
             </button>
         </>
     )

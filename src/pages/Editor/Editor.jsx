@@ -15,7 +15,7 @@ const Editor = () => {
     return (
         <main className='h-screen w-screen overflow-hidden bg-[radial-gradient(circle_at_top,_#007ACC_0%,_#030996_15%,_#01030A_60%)]'>
             <NavBar />
-            <main id='panel' ref={panel} className='h-[87vh] w-[98vw] overflow-hidden m-5 border-2 border-[#2f3c82] rounded-md glassBlue flex items-center justify-center'>
+            <main id='panel' ref={panel} className='h-[87vh] w-[98vw] md:overflow-hidden overflow-scroll m-5 md:border-2 md:border-[#2f3c82] rounded-md glassBlue md:flex items-center justify-center'>
                 <LeftPanel />
                 <RightPanel />
             </main>

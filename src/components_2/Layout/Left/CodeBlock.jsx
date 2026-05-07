@@ -19,7 +19,7 @@ const CodeEditor = () => {
     }, [lang, setCode]);
 
     return (
-        <section id='codeEditor' className=' w-full bg-[#1e1e1e] rounded-lg border border-[#263ba7] py-2 mt-2'>
+        <section id='codeEditor' className='md:w-full w-[90%] bg-[#1e1e1e] rounded-lg border border-[#263ba7] py-2 lg:mt-2 mt-15'>
             <Editor
                 height="61vh"
                 width="full"

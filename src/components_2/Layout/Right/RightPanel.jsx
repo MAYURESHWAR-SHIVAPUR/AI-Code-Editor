@@ -5,18 +5,18 @@ import Langs from '../../Langs/Langs'
 
 const RightPanel = () => {
   return (
-    <aside  className='h-full w-1/3'>
+    <aside  className='h-full md:w-1/3 w-[95%]'>
       <RightNav />
-      <div className='w-full h-2/3 flex gap-2  p-2 border border-[#263ba7] rounded-md'>
+      <div className='w-full lg:h-2/3 h-[80%] flex gap-2  p-2 border border-[#263ba7] rounded-md'>
         <Outlet />
-        <section id='lang' className='h-full w-fit bg-[linear-gradient(to_bottom_right,_#17076c30_38%,_#000000)] border-2 border-[#8B98D5] rounded-lg mr-0 py-3 px-2 flex flex-col items-center justify-evenly cursor-pointer'>
+        <section id='lang' className='h-full w-fit bg-[linear-gradient(to_bottom_right,_#17076c30_38%,_#000000)] border-2 border-[#8B98D5] rounded-lg mr-0 py-3 lg:px-2 flex flex-col items-center justify-evenly cursor-pointer'>
           <Langs lang={"Python"} icon={"python"} />
           <Langs lang={"Javascript"} icon={"js"} />
           <Langs lang={"Java"} icon={"java"} />
           <Langs lang={"Cpp"} icon={"Cpp"} img={true} />
         </section>
       </div>
-      <footer className=' border-2 border-[#0EA5E9] rounded-lg h-[21%] w-full mr-2 my-2 text-white p-3 flex items-center justify-between' >
+      <footer className=' md:hidden border-2 border-[#0EA5E9] rounded-lg h-[21%] w-full mr-2 my-2 text-white p-3 lg:flex flex items-center justify-between' >
         <section className='w-2/3 '>
           <article id='RightFooterTitle' className='flex items-center justify-between w-fit mb-4'>
             <i id='i' class="fa-solid fa-wand-magic-sparkles text-[#6958F7] mr-3 text-2xl"></i>
