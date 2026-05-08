@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 import { executeCode } from "../services/code.service";
 import { setLang, setCode, setOutput, setInput, setRunning } from "../features/slice";
 import { lang as template } from "../Data/lang";
@@ -14,23 +14,27 @@ export const useEditorActions = () => {
     const input = useSelector((state) => state.CodeEditor.input);
 
 
-    const runCode = async () => {
-        dispatch(setRunning(true));
-        clearTimeout(timerRef.current);
-
-        timerRef.current = setTimeout(async () => {
+    const runCode = useCallback(
+        async () => {
+            dispatch(setRunning(true));
+            clearTimeout(timerRef.current);
             
-            const res = await executeCode({
-                code,
-                language: lang,
-                input
-            });
-            
-            dispatch(setOutput(res));
+            timerRef.current = setTimeout(async () => {
+                
+                const res = await executeCode({
+                    code,
+                    language: lang,
+                    input
+                });
+                
+                dispatch(setOutput(res));
 
-            dispatch(setRunning(false));
-        }, 1000);
-    };
+                dispatch(setRunning(false));
+            }, 1000);
+        }
+
+        , [code, lang, input, dispatch])
+
 
 
     const ClearAll = () => {

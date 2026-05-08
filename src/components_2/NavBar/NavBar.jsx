@@ -22,7 +22,7 @@ const NavBar = () => {
             </section>
             <form action="" ref={input} className='h-full w-1/3 border-2 border-[#5a75b0] rounded-md flex items-center justify-center px-5 md:block hidden'>
                 <i class="fa-solid fa-magnifying-glass text-[#5a75b0]"></i>
-                <input type="text" className='h-full w-full pl-3 border-none outline-none' />
+                <input type="text" className='h-full w-[90%] pl-3 border-none outline-none' />
             </form>
             <section ref={profile} className='w-fit h-full flex items-center justify-around gap-2'>
                 <i src="" alt="" className=' fa-regular fa-circle-user md:text-2xl'></i>

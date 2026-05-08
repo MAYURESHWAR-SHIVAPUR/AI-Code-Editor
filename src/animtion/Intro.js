@@ -12,7 +12,7 @@ export const fadeInUp = (...el) => {
 };
 
 export const fadeIn = () => {
-    gsap.fromTo(["#Title", "#input", "#login"], {
+    gsap.fromTo(["#Title" ], {
         opacity: 0,
         y: -40,
         duration: 0.7,
